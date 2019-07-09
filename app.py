@@ -18,8 +18,8 @@ class TwitterBot:
         login.click();
         email = bot.find_element_by_name('session[username_or_email]');
         password = bot.find_element_by_name('session[password]');
-        #email.clear();
-        #password.clear();
+        email.clear();
+        password.clear();
         email.send_keys(self.username);
         password.send_keys(self.password);
         password.send_keys(Keys.RETURN);
@@ -45,6 +45,6 @@ class TwitterBot:
 
 
 
-hussein = TwitterBot('hussein@hotmail.com', "huss123");
+hussein = TwitterBot('email@hotmail.com', "password123");
 hussein.login();
 hussein.LikeTweets('webdevelopment');
